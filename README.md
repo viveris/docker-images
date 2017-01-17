@@ -8,3 +8,4 @@ Contains the following images:
 * For CI purpose:
   * [centos5-setuptools](centos5-setuptools/) [![](https://images.microbadger.com/badges/image/viveris/centos5-setuptools.svg)](https://microbadger.com/images/viveris/centos5-setuptools "Get your own image badge on microbadger.com")
   * [centos7-python-tests](centos7-python-tests/) [![](https://images.microbadger.com/badges/image/viveris/centos7-python-tests.svg)](https://microbadger.com/images/viveris/centos7-python-tests "Get your own image badge on microbadger.com")
+  * [centos7-mock](centos7-mock/) [![](https://images.microbadger.com/badges/image/viveris/centos7-mock.svg)](https://microbadger.com/images/viveris/centos7-mock "Get your own image badge on microbadger.com")
