@@ -1,5 +1,5 @@
 FROM centos:7.2.1511
-RUN yum install python-setuptools pygobject2-devel -y && \
+RUN yum install python-setuptools pygobject2-devel pyOpenSSL gcc openssl-devel -y && \
     easy_install pip && \
     pip install mock && \
     pip install pep8 && \
