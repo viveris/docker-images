@@ -11,3 +11,5 @@ Contains the following images:
   * [centos7-python-tests](centos7-python-tests/) [![](https://images.microbadger.com/badges/image/viveris/centos7-python-tests.svg)](https://microbadger.com/images/viveris/centos7-python-tests "Get your own image badge on microbadger.com")
   * [centos7-mock](centos7-mock/) [![](https://images.microbadger.com/badges/image/viveris/centos7-mock.svg)](https://microbadger.com/images/viveris/centos7-mock "Get your own image badge on microbadger.com")
   * [ubuntu-qcow](ubuntu-qcow/) [![](https://images.microbadger.com/badges/image/viveris/ubuntu-qcow.svg)](https://microbadger.com/images/viveris/ubuntu-qcow "Get your own image badge on microbadger.com")
+  * [debian-builder](debian-builder/) [![](https://images.microbadger.com/badges/image/viveris/debian-builder.svg)](https://microbadger.com/images/viveris/debian-builder "Get your own image badge on microbadger.com")
+  * [ubuntu-builder](ubuntu-builder/) [![](https://images.microbadger.com/badges/image/viveris/ubuntu-builder.svg)](https://microbadger.com/images/viveris/ubuntu-builder "Get your own image badge on microbadger.com")
