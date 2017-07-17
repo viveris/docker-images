@@ -5,7 +5,7 @@ DISTRIBUTION="$2"
 COMPONENT="$3"
 PACKAGES="$4"
 BUILD_NUMBER="$5"
-OS="ubuntu"
+OS="$6"
 
 if [ -z "${REPOSITORY}" -o \
      -z "${DISTRIBUTION}" -o \
@@ -14,6 +14,10 @@ if [ -z "${REPOSITORY}" -o \
      -z "${PACKAGES}" ] ; then
     echo "Please give all parameters."
     exit 1
+fi
+
+if [ -z "${OS}" ]
+	then OS="ubuntu"
 fi
 
 REPO_USER="root"
