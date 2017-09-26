@@ -1,13 +1,9 @@
 FROM viveris/ubuntu-builder
 
-ARG MAVEN_VERSION=3.5.0
-ARG USER_HOME_DIR="/root"
-ARG SHA=beb91419245395bd69a4a6edad5ca3ec1a8b64e41457672dc687c173a495f034
-ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
-
+# JDK 8 install
 RUN \
   apt-get update && \
-  apt-get install -y software-properties-common && \
+  apt-get install -y software-properties-common sshpass && \
   echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
   add-apt-repository -y ppa:webupd8team/java && \
   apt-get update && \
@@ -17,6 +13,12 @@ RUN \
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
+# Maven install
+ARG MAVEN_VERSION=3.5.0
+ARG USER_HOME_DIR="/root"
+ARG SHA=beb91419245395bd69a4a6edad5ca3ec1a8b64e41457672dc687c173a495f034
+ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
+
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && wget -O /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha256sum -c - \
@@ -25,5 +27,9 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
 ENV MAVEN_HOME /usr/share/maven
+
+# Script to upload debian packages
+ADD deb_upload.sh /deb_upload.sh
+RUN chmod +x /deb_upload.sh
 
 CMD ["bash"]
