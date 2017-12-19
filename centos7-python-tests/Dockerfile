@@ -7,5 +7,6 @@ RUN yum install python-setuptools pygobject2-devel pyOpenSSL gcc openssl-devel -
     pip install simplejson && \
     pip install suds && \
     pip install requests && \
+    pip install setuptools --upgrade && \
     yum clean all
 
