@@ -7,7 +7,7 @@ RUN apt-get update && \
   apt-get --yes install asciidoctor && \
   apt-get --yes install pdftk && \
   apt-get --yes install zlib1g-dev libpng-dev libfontconfig1 libx11-dev xfonts-75dpi && \
-  apt-get --yes install git && \
+  apt-get --yes install git curl && \
   apt-get clean && \
   apt-get autoclean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
